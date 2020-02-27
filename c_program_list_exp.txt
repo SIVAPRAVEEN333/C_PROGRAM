@@ -1,0 +1,16 @@
+//C Programs which in this folder these programs are examples for each topic
+
+
+1.Armstrong number.c
+2.C program to check two strings are anagram or not	//pending
+3.C_threading
+4.Structure with union
+5.add two matrics
+5.fibinocci series
+6.interchanging array
+7.largest of all numbers
+8.matrix comparison
+9.matrix mulitiplication
+10.selection sort //pending
+11.swapting	
+12.union
