@@ -16,13 +16,15 @@ selsort_array_values_store_check =it stores the return value from the function s
 
 #include<stdio.h>
 //function declaration
+#include<stdio.h>
+//function declaration
 int selection_sort(); 
 
 //varaibles declaration
 int *selsort_array_user_value,selsort_array_values_user_index_count;
 
 
-
+//this is for only selection_sort for all types of sorting Algorithms in single program change the values getting!#
 int main()
 {
     int selsort_array_values_store_check;
@@ -33,9 +35,9 @@ int main()
     selsort_array_user_value=(int*)malloc(selsort_array_values_user_index_count*sizeof(int));       //allocating memory space for the user input array
     for(int i=0;i<selsort_array_values_user_index_count;i++)
     {
-        scanf("%d",&selsort_array_user_value);                                              //storing the array values for sorting    
+        scanf("%d",&selsort_array_user_value[i]);                                              //storing the array values for sorting    
     }
-    selsort_array_user_value=(int *)malloc(selsort_array_values_user_index_count*sizeof(int));          //allocaiting memory
+   // selsort_array_user_value=(int *)malloc(selsort_array_values_user_index_count*sizeof(int));          //allocaiting memory
     //displays the stored values in the sel_sort_array
     printf("\nThe User input values for the array to be stored: ");
     for(int i=0;i<selsort_array_values_user_index_count;i++)
@@ -56,11 +58,26 @@ int main()
 int selection_sort()                        //selection_sort function
 {
     //configurinng selection_sort
-    printf("\nSelection sort will be proceedded...");
-    
-    
-    
-    
+    printf("\nSelection sort will be proceedded...\n");
+    int i,j,temp;
+    for(i=0;i<selsort_array_values_user_index_count;i++)
+    {
+        for(j=i+1;j<selsort_array_values_user_index_count;j++)
+        {
+            if(selsort_array_user_value[i]>selsort_array_user_value[j])      
+            {
+                temp=selsort_array_user_value[i];
+                selsort_array_user_value[i]=selsort_array_user_value[j];
+                selsort_array_user_value[j]=temp;
+            }
+        }
+    }
+    printf("The sorted array(selection sort: ");
+    for(int i=0;i<selsort_array_values_user_index_count;i++)
+    {
+        printf("%d\t",selsort_array_user_value[i]);
+    }
+    return 0;               
 }
 
 
