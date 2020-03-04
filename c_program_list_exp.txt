@@ -1,4 +1,4 @@
-//C Programs which in this folder these programs are examples for each topic
+// Programs which in this folder these programs are examples for each topic
 
 
 1.Armstrong number.c
@@ -11,6 +11,49 @@
 7.largest of all numbers
 8.matrix comparison
 9.matrix mulitiplication
-10.selection sort //pending
+10.selection sort //done
 11.swapting	
 12.union
+/*pending
+13.maximum element in array
+14.minimum element in array
+15.linear search in array
+16.binary search in array
+17.insert element in array
+18.delete element in array
+19.insertion sort
+20.bubble sort
+21.compare strings
+22.concatenate string with string.h 
+23.concatenate string without string.h
+24.remove space
+25.swap strings
+26.working with files!#
+27.get ip address
+28.anagrams
+29.working with matrix(add,sub,mult,etc,.
+30.hcf and lcm
+31.binary to ascii
+32.decimal to binary
+33.factorial
+34.leap year program
+35.gaming!#
+36.roots of quadratic equation
+37.sorting
+
+
+
+
+
+Imp note:
+1.Threading
+2.Socket programming
+3.tcp/ip
+4.chatroom/multiroom chat house processing
+
+
+
+
+
+
+
