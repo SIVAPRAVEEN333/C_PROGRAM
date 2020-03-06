@@ -1,0 +1,12 @@
+Bubble sort:
+*adjacent element is compard and swapped
+*slow compared to selection sort
+*exchanging the data(highest)
+
+
+
+selection sort:
+*largest element is selected and swapped with the last element(in case of ascending order).
+*fast compared to bubble sort
+*selecting the data
+
