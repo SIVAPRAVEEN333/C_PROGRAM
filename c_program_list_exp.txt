@@ -17,7 +17,7 @@
 /*pending
 13.maximum element in array
 14.minimum element in array
-15.linear search in array
+15.linear search in Sorted and unsorted array
 16.binary search in array
 17.insert element in array
 18.delete element in array
@@ -40,7 +40,8 @@
 35.gaming!#
 36.roots of quadratic equation
 37.sorting
-
+38.C program to implement Brute force algorithm
+39.C program to implement Knuth-Morris-Pratt Algorithm
 
 
 
