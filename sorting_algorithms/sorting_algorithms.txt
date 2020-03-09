@@ -61,10 +61,17 @@ with the greater values until partition of array containing 2 elements.
 
 
 Heap sort:
+The heap sort can be defined as the sorting algorithm that works by searching the maximum element in the list and place it to the last. 
+The algorithm performs the action recursively until the array gets sorted into the ascending way.
+It is very time taking the process to choose the maximum value and move it to the last and 
+hence it is considered as a less efficient sorting approach when it comes to sorting the large list. However,
+it works fine with the list that has a limited number of values.
+Below is the implementation of this algorithm in the C programming language together with the output. 
 
-
-
-
+alt-The working of this algorithm is the same as that of other sorting algorithms as it also sorts the list in ascending order. 
+When the above-written code runs, the user has to submit the count of values that they will be sorting. Once the values are submitted,
+the code will process them in order to turn the array into the sorted one. 
+The output will be shown eventually and it can be observed that the values that have been submitted by the user has sorted in ascending order.
 
 
 
