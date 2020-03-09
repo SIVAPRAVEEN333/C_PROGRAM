@@ -30,5 +30,44 @@ definition:Bubble Sort works by comparing each element of the list with the elem
 
 
 Insertion Sort:
+Shift elements one by one
+definition:try recalling how you sort a deck of cards. You start from the beginning, traverse through the cards and as you find cards misplaced by 
+	precedence you remove them(like making space/here we call it hole/) and insert them back into the right position. 	
+	Eventually what you have is a sorted deck of cards. The same idea is applied in the Insertion Sort algorithm. The following is an implementation in C.
+
+
+
+Merge Sort:
+Divide and Conquer algorithm or Merge two array
+definition:Merge sort is a recursive algorithm that continually splits a array in equal two halves.
+	If the array is empty or has one item, it is sorted by definition (the base case). If the array has more than one item,
+ 	we split array and recursively invoke a merge sort on both halves. Once the two halves are sorted, the fundamental operation, called a merge, is performed.
+	Merging is the process of taking two smaller sorted array and combining them together into a single, sorted, new array.
+
+
+
+
+Quick Sort:
+Divide and Conquer algorithm or Partitioning array
+definition:
+1)Choose any element as pivot(here i chose last) element from the array list.
+
+2)Partitioning the array so that all the elements with value less than the pivot will come before the pivot and the element with value greater 
+will come after the pivot with in the same array,which make pivot element in the sorted position.(If the reverse the order we are reversing the sorting order that is descending).
+
+3)Apply recursively the 3rd step to the sub array of the element with smaller values and separate the sub array of the elements 
+with the greater values until partition of array containing 2 elements.
+
+
+
+Heap sort:
+
+
+
+
+
+
+
+
 
 
