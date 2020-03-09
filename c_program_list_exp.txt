@@ -42,9 +42,13 @@
 37.sorting
 38.C program to implement Brute force algorithm
 39.C program to implement Knuth-Morris-Pratt Algorithm
-
-
-
+40.Sorting_algorithms:
+	selection_sort
+	insertion_sort
+	bubble_sort
+	merge_sort
+	quick_sort
+	heap_sort
 
 Imp note:
 1.Threading
