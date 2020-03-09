@@ -1,12 +1,34 @@
-Bubble sort:
-*adjacent element is compard and swapped
-*slow compared to selection sort
-*exchanging the data(highest)
-
+Types of sorting algorithms:
+1.Selection Sort
+2.Bubble sort
+3.Insertion Sort
+4.Merge Sort
+5.Quick Sort
+6.Heap sort
+7.and tooo binary search!!!
 
 
 selection sort:
 *largest element is selected and swapped with the last element(in case of ascending order).
 *fast compared to bubble sort
-*selecting the data
+*Repeatedly finding the minimum element and swapping.
+defintion:It basically determines the minimum (or maximum) of the list and swaps it with the element at the index where its supposed to be. 
+	The process is repeated such that the nth minimum (or maximum) element is swapped with the element at the n-1th index of the list.
+	The below is an implementation of the algorithm in C.
+
+
+
+Bubble sort:
+*adjacent element is compard and swapped
+*slow compared to selection sort
+*exchanging the data(highest)
+*Swapping the adjacent elements
+definition:Bubble Sort works by comparing each element of the list with the element next to it and swapping them if required. 
+	With each pass, the largest of the list is “bubbled” to the end of the list whereas the smaller values sink to the bottom. 
+	It is similar to selection sort although not as straight forward.
+ 	Instead of “selecting” maximum values, they are bubbled to a part of the list. An implementation in C.
+
+
+Insertion Sort:
+
 
