@@ -1,7 +1,8 @@
+
 //intialy it is combined we need create a header file with memory constraint with code optimization 
 
-
 #include<stdio.h>
+#include<stdlib.h>
 
 int bubble_sort(int *a,int n);
 int selection_sort(int *a,int n);
