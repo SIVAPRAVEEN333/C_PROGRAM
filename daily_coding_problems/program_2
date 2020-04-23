@@ -1,0 +1,70 @@
+/*
+Program:2
+Given an array of integers, return a new array such that each element at index i of the new array 
+is the product of all the numbers in the original array except the one at i.
+For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. 
+If our input was [3, 2, 1], the expected output would be [2, 3, 6].
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+#define my_sizeof(type) ((char*)(&type+1)-(char*)(&type))
+int main()
+{
+    int *arr,*sub_arr;
+    int n;
+    printf("Enter the number of elements in the array:");
+    scanf("%d",&n);
+    arr=(int *)malloc(n*sizeof(int));
+    if(arr==NULL)
+    {
+        printf("\nMemory allocation for arr(main_array) is not allocated");
+    }
+    else
+    {
+        printf("\nMemory allocation for arr(main_array) is allocated successfully");
+    }
+    sub_arr=(int*)malloc(n*sizeof(int));
+    if(sub_arr==NULL)
+    {
+        printf("\nMemory allocation for sub_arr(sub_arr)is not allocated");
+    }
+    else
+    {
+        printf("\nMemory allocation for sub_arr(sub_arr) is allocated successfully");
+    }
+    
+    
+    printf("\n***Enter the elements for the array***\n");
+    for(int i=0;i<n;i++)
+    {
+        int arr_scan_temp=i+1;
+        printf("Enter the %d element of the array: ",arr_scan_temp);
+        scanf("%d",arr+i);
+    }
+    printf("\nEntered array is: ");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d\t",*arr+i);
+    }
+    
+    //algo started   
+    for(int i=0;i<n;i++)
+    {
+        sub_arr[i]=1;
+        for(int j=0;j<n;j++)
+        {
+            if(j!=i)
+            {
+                sub_arr[i]*=arr[j];
+            }
+        }
+    }
+    
+    printf("\nThe Sorted Multiplication array is:");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d\t",*(sub_arr+i));
+    }
+}
