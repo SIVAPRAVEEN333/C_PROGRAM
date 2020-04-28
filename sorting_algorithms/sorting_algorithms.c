@@ -6,6 +6,7 @@
 
 int bubble_sort(int *a,int n);
 int selection_sort(int *a,int n);
+int insertion_sort(int *a,int n);
 
 int main()
 {
@@ -35,13 +36,26 @@ int main()
     
     //use one at a time bcoz here array values stored in a it will be already sorted when first sorting algo excuted
     
-    printf("\n\t\t\t***Bubble Sorting Algorithm***\t\t\t");
-    bubble_sort(a,n);
-    printf("\n\t\t\t***Selection Sorting Algorithm***\t\t\t");
-    selection_sort(a,n);
-    
+    //printf("\n\t\t\t***Bubble Sorting Algorithm***\t\t\t");
+    //bubble_sort(a,n);
+    //printf("\n\t\t\t***Selection Sorting Algorithm***\t\t\t");
+    //selection_sort(a,n);
+    printf("\n\t\t\t***insertion Sorting Algorithm***\t\t\t");
+    insertion_sort(a,n);
     return 0;
 }
+
+
+
+/*
+ ********************************************************************
+ *
+ *
+ *
+ *
+ ********************************************************************
+ */
+
 
 int bubble_sort(int *a,int n)                   //a=array, n=user defined array element size
 {
@@ -65,6 +79,21 @@ int bubble_sort(int *a,int n)                   //a=array, n=user defined array 
         printf("%d\t",a[i]);
     }
 }
+
+
+
+
+
+/*
+ ********************************************************************
+ *
+ *
+ *
+ *
+ ********************************************************************
+ */
+
+
 
 int selection_sort(int *a,int n)
 {
@@ -93,4 +122,33 @@ int selection_sort(int *a,int n)
 }
 
 
-
+/*
+ ********************************************************************
+ *
+ *
+ *
+ *
+ ********************************************************************
+ */
+int insertion_sort(int *a,int n)
+{
+    int array_i;
+    for(array_i=1;array_i<n;array_i++)
+    {
+        int key=a[array_i];
+        int j=array_i-1;
+            
+        while(array_i<a[j] && j>=0)
+        {
+            a[j+1]=a[j];
+            --j;
+        }
+        a[j+1]=key;                             // this time j is in -1 so we need to add one
+    }
+    printf("\nThe sorted array (insertion_sort): ");
+    for(int k=0;k<n;k++)
+    {
+        printf("%d\t",a[k]);
+    }
+    return 0;
+}
