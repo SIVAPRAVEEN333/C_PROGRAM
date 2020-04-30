@@ -40,8 +40,8 @@ int main()
     //bubble_sort(a,n);
     //printf("\n\t\t\t***Selection Sorting Algorithm***\t\t\t");
     //selection_sort(a,n);
-    printf("\n\t\t\t***insertion Sorting Algorithm***\t\t\t");
-    insertion_sort(a,n);
+    //printf("\n\t\t\t***insertion Sorting Algorithm***\t\t\t");
+    //insertion_sort(a,n);
     return 0;
 }
 
