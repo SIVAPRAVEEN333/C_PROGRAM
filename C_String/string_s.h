@@ -19,6 +19,9 @@ char string_palindrome(char*);
 char string_alpha_order_sort(char*);				//first argument is user/already given string second argument is to be store the function operation data/return data for future use
 char *string_remove_expect_char(char*);
 char *string_remove_spaces(char*);
+char string_user_data_check(char*);					//this is temp used function to check the user given data this will be used for any function
+int string_match(char*,char*);
+
 
 
 #endif /* STRING_S_H_ */
