@@ -2,7 +2,6 @@
 #define STRING_S_H_
 
 
-
 int string_print(char*);
 int string_length(char*);
 char string_copy(char*,char*);

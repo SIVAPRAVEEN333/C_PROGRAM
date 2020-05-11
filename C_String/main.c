@@ -3,7 +3,6 @@
 //#include<string.h>
 #include "string_s.h"
 
-
 /*eg for variable decalration
 string_length=function name
 str_length=function local varible not main
@@ -154,6 +153,8 @@ int main()
 	{
 		printf("\nThe termination fails");
 	}
+	
+	//added anagram
 	
 	//after the one function used the string data will be changed due to previous function excutionn.... here im using for test case with same variable name for all the function test you can use specific varible name
     
