@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "string_s.h"
-#include<string.h>
+//#include<string.h>
 #include "def.h"
 
 
@@ -296,7 +296,7 @@ char *string_remove_spaces(char *str)						//whenever you return the total strin
 {
 	int i=0,j;
 	int str_len;
-	str_len=strlen(str);
+	str_len=string_length(str);
 	printf("\nThe length of the given string is: %d",str_len);
 	for(i=0;i<str_len;i++)
 	{
