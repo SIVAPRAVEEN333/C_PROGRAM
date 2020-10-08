@@ -1,4 +1,4 @@
-Opening Modes in Standard I/O
+#Opening Modes in Standard I/O
 Mode	Meaning of Mode	During Inexistence of file
 r	Open for reading.	If the file does not exist, fopen() returns NULL.
 rb	Open for reading in binary mode.	If the file does not exist, fopen() returns NULL.
@@ -24,6 +24,48 @@ wb+	Open for both reading and writing in binary mode.	If the file exists, its co
 				If the file does not exist, it will be created.
 a+	Open for both reading and appending.	If the file does not exist, it will be created.
 ab+	Open for both reading and appending in binary mode.	If the file does not exist, it will be created.
+
+
+
+
+
+
+
+#Closing a File
+The file (both text and binary) should be closed after reading/writing.
+
+Closing a file is performed using the fclose() function.
+
+fclose(fptr);
+Here, fptr is a file pointer associated with the file to be closed.
+
+
+
+For reading and writing to a text file, we use the functions fprintf() and fscanf().They are just the file versions of printf() and scanf(). The only difference is that fprint() and fscanf() expects a pointer to the structure FILE.
+
+
+
+
+#Reading and writing to a binary file
+Functions fread() and fwrite() are used for reading from and writing to a file on the disk respectively in case of binary files.
+
+Writing to a binary file
+To write into a binary file, you need to use the fwrite() function. The functions take four arguments:
+
+address of data to be written in the disk
+size of data to be written in the disk
+number of such type of data
+pointer to the file where you want to write.
+fwrite(addressData, sizeData, numbersData, pointerToFile);
+
+
+
+
+
+#Reading from a binary file
+Function fread() also take 4 arguments similar to the fwrite() function as above.
+
+fread(addressData, sizeData, numbersData, pointerToFile);
 
 
 
