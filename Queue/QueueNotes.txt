@@ -1,0 +1,25 @@
+QUEUE:
+
+Queue is a linear data structure to store and manipulate data elements. It follows the order of FIFO.
+In Queues, the first element entered into the array is the first element to be removed from the array.
+
+
+Operations associated with Queues in c:
+isEmpty(): To check if the queue is empty
+isFull(): To check whether the queue is full or not
+dequeue(): Removes the element from the frontal side of the queue
+enqueue(): It inserts elements to the end of the queue
+Front: Pointer element responsible for fetching the first element from the queue
+Rear: Pointer element responsible for fetching the last element from the queue
+
+
+Working of Queue Data Structure:
+
+Queue follows the FIFO pattern. The first element is the first to be pulled out from the list of elements.
+
+Front and read pointers keep the record of the first and last elements in the queue
+At first, we need to initialize the queue by setting “Front = -1” and “Read = -1”
+In order to insert the element (enqueue), we need to check whether the queue is already full i.e., check the condition for overflow. If the queue is not full, we’ll have to increment the value of the Rear index by 1 and place the element at the position of the rear pointer variable. When we get to insert the first element in the queue, we need to set the value of front to 0
+While inserting the one element Rear = +1, and Front = 0;
+
+In order to remove the element (dequeue) from the queue we need to check whether the queue is already empty, i.e., check the condition for underflow. If the queue is not empty, we’ll have to remove and return the element at the position of the front pointer, and increment the front index value by 1. When we get to remove the last element from the queue, we will have to set the values of the front and rear index to -1.
