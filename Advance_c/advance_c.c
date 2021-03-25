@@ -16,7 +16,9 @@ void funcBeforeMain(void) __attribute__ ((constructor));
 
 void funcBeforeMain()
 {
-    printf("Function executing before main !! \n");
+    printf("\n***********************************************\n");
+    printf("Function executing before main !!");
+    printf("\n***********************************************\n");
 }
 
 /* executing Function after main !! */
@@ -26,7 +28,7 @@ void funcAfterMain(void) __attribute__ ((destructor));
 void funcAfterMain()
 {
     printf("\n***********************************************\n");
-    printf("cleanup code after main !! \n");
+    printf("cleanup code after main !!");
     printf("\n***********************************************\n");
 }
 
@@ -51,7 +53,7 @@ int main()
     size eg: mem char/int/float whatever the size of pointer will be 4/8 depends upon the 
     complier */
 
-    realloc(mem, 0);        // memory will be released, it will return the new location in memory, needs to 
+    mem = realloc(mem, 0);        // memory will be released, it will return the new location in memory, needs to 
                             // resuse otherwise it will gives u warning !!
     /* use of %n in printf */
     {
@@ -142,7 +144,83 @@ int main()
             statement needs to excute !!
         #endif
      */
+
+    /* finding the system enidaness */
+    
+    union endian_t
+    {
+        unsigned int i;
+        unsigned char c[2];
+    };
+    
     
     
     return 0;
 }
+
+
+#define NOT_TO_EXCUTE_OR_COMPILE 0
+
+#if NOT_TO_EXCUTE_OR_COMPILE
+
+#1. Difference between const char* p and char const* p ?
+    
+    const char* p:
+        character pointed by pointer variable p is constant. This value
+    cannot be changed but we can initialize p with other memory location. 
+    It means the character pointed by p is constant but not_ po. in 
+    
+    char const* p:
+        pointer p is constant not_ the character referenced by it.
+        so we can't assing p with other location but we can change the value
+        of the character pointed by p.
+#2. what is the point of using_ malloc(0)?
+    
+    According to c standard, “ If the size of the space requested is zero,
+    the behavior is implementation defined: either a null pointer is returned, 
+    or_ the behavior is as if_ the size were some nonzero value, except that
+    the returned pointer shall not be used to access an object”. But there is a benefit of this. 
+    The pointer return_ after malloc(0)_ will be valid pointer and_ can be deallocated
+    using_ free()_ and_ it will not_ crash the program.
+    
+#3. what is function pointer?
+    
+    Function pointer, as the name suggests, points to a function. We can declare a function pointer and 
+    point to a function. After that using that function pointer we can call that function
+    eg:
+    #include<stdio.h>
+    void Hello();
+    typedef void (*FP)();
+    
+    FP fun(int);
+    
+    main()
+    {
+    FP (*ptr)(int) = NULL;
+    FP p;
+    ptr = fun;
+    p = (*fun)(30);
+    (*p)();
+    }
+    
+    void Hello()
+    {
+    printf("Hello\n");
+    }
+    
+    FP fun(int a)
+    {
+    FP p = Hello;
+    printf("Number is : %d\n", a);
+    return p;
+    }
+
+#4. indirection in c?
+    
+    when we use variable name to access the value it is direct value it is direct access.
+    if we use pointer to get the variable value, it is called indirection.
+    
+
+#endif
+
+
